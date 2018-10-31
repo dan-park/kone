@@ -90,7 +90,7 @@ DATABASES = {
         'USER': 'onehealth',
         'PASSWORD': 'oh123',
         'HOST': 'ihpark-918.postgres.pythonanywhere-services.com',
-        'PORT': 10667,
+        'PORT': '10918',
     }
 }
 
