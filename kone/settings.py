@@ -25,7 +25,7 @@ SECRET_KEY = '7v9k_ea1@betw&7r9j-)%9s%7(wlt9th@e9s&y4no@2m%u04h2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mbiome.kr']
 
 
 # Application definition
