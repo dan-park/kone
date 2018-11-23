@@ -1,0 +1,38 @@
+
+
+# 2018.11.13
+# insert contigs to the postgresql database (H_1_1)
+python z01.insert_contigs_into_db.py -s H_1_1 -i C:\Users\ihpark\PycharmProjects\kone\upload\H_1_1\final.contigs.fa
+
+# insert contigs to the postgresql database (H_13_2)
+python z01.insert_contigs_into_db.py -s H_13_2 -i C:\Users\ihpark\PycharmProjects\kone\upload\H_13_2\final.contigs.fa
+
+
+# 2018.11.14
+# DATABASE REMOVE (ONEHEALTH)
+
+# insert arg database into database
+python z02.insert_card_aro_index.py -i C:\Users\ihpark\PycharmProjects\kone\database\CARD\aro_index.csv
+
+# insert arg gene family, drug class, resistance mechanism
+python z03.insert_card_aro_categories.py -i C:\Users\ihpark\PycharmProjects\kone\database\CARD\aro_categories_index.csv
+
+python z04.insert_card_aro_protein_fasta.py -i C:\Users\ihpark\PycharmProjects\kone\database\CARD\protein_fasta_protein_homolog_model.fasta
+
+python z05.insert_contigs_prokka.py -s H_1_1 -i D:\01.onehealth\21.prokka\1-1\1-1_contig_to_prokka.tsv
+
+python z06.insert_prokka_card_diamond.py -s H_1_1 -i D:\01.onehealth\22.prokka_card_diamond\1-1_diamond_card_prokka.tsv
+
+
+# 2018.11.16
+python z07.insert_prokka_gene_sequence.py -s H_1_1 -i D:\01.onehealth\21.prokka\1-1\1-1.faa
+
+# insert contig based CARD mapping
+python z08.insert_contigs_aro_diamond.py -s H_1_1 -i D:\01.onehealth\21.contig_card\1-1_diamond_card_contig.tsv
+
+# Required library
+pip install python-intervals
+
+# 2018. 11. 22
+# Taxon DB
+python z11.insert_taxon_names.py -i D:\01.onehealth\00.common\taxdmp\names.dmp

@@ -25,7 +25,7 @@ SECRET_KEY = '7v9k_ea1@betw&7r9j-)%9s%7(wlt9th@e9s&y4no@2m%u04h2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mbiome.kr']
+ALLOWED_HOSTS = ['mbiome.kr', 'localhost']
 
 
 # Application definition
@@ -83,14 +83,25 @@ WSGI_APPLICATION = 'kone.wsgi.application'
 #}
 
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'onehealth',
+#        'USER': 'onehealth',
+#        'PASSWORD': 'oh123',
+#        'HOST': 'ihpark-918.postgres.pythonanywhere-services.com',
+#        'PORT': '10918',
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'onehealth',
         'USER': 'onehealth',
         'PASSWORD': 'oh123',
-        'HOST': 'ihpark-918.postgres.pythonanywhere-services.com',
-        'PORT': '10918',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -133,3 +144,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')      # ihpark
+
+MEDIA_URL = '/upload/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'upload') # ihpark
